@@ -1,0 +1,17 @@
+﻿@model IEnumerable<NasdaqRSS>
+
+@if (Model != null)
+{
+    foreach (var rssItem in Model)
+    {
+        <div class="card mb-3">
+            <h5 class="card-header">@rssItem.Title</h5>
+            <div class="card-body">
+                <h5 class="card-title">@rssItem.Date</h5>
+                <p class="card-text">@rssItem.Summary</p>
+                <a href="@rssItem.Link" class="btn btn-primary">Yes, open it!</a>
+            </div>
+        </div>
+    }
+}
+

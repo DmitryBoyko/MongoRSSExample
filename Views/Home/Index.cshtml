@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="rssContainer" class="container">
+
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("~/Views/Shared/_ValidationScriptsPartial.cshtml");}
+    <script src="~/js/page-home.js"></script>
+}
